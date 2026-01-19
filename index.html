@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,252 +13,115 @@
     --light:#F6F7F9;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:var(--light);
-    color:var(--dark);
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI', Arial, sans-serif;background:var(--light);color:var(--dark);}
 
 /* ===== ANIMATIONS ===== */
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes pulseGold{
-    0%{box-shadow:0 0 0 rgba(231,199,166,.6);}
-    50%{box-shadow:0 0 25px rgba(231,199,166,.9);}
-    100%{box-shadow:0 0 0 rgba(231,199,166,.6);}
-}
+@keyframes fadeUp{from{opacity:0; transform:translateY(30px);}to{opacity:1; transform:translateY(0);}}
+@keyframes pulseGold{0%{box-shadow:0 0 0 rgba(231,199,166,.6);}50%{box-shadow:0 0 25px rgba(231,199,166,.9);}100%{box-shadow:0 0 0 rgba(231,199,166,.6);}}
 
 /* ===== HEADER ===== */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:var(--primary);
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:18px 22px;
-    z-index:1000;
-    animation:fadeUp .8s ease;
-}
-
-header img{
-    height:58px;
-}
-
-header span{
-    color:var(--gold);
-    font-weight:600;
-    letter-spacing:1px;
-}
+header{position:fixed;top:0;width:100%;background:var(--primary);display:flex;align-items:center;gap:15px;padding:18px 22px;z-index:1000;animation:fadeUp .8s ease;}
+header img{height:58px;}
+header span{color:var(--gold);font-weight:600;letter-spacing:1px;}
 
 /* ===== NAV ===== */
-nav{
-    position:fixed;
-    top:85px;
-    width:100%;
-    background:#0b1f33;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    padding:12px 0;
-    z-index:999;
-}
-
-nav a{
-    color:var(--gold);
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav a:hover{
-    opacity:.7;
-}
+nav{position:fixed;top:85px;width:100%;background:#0b1f33;display:flex;justify-content:center;gap:25px;padding:12px 0;z-index:999;}
+nav a{color:var(--gold);text-decoration:none;font-weight:600;transition:.3s;}
+nav a:hover{opacity:.7;}
 
 /* ===== APP ===== */
-.app{
-    padding:180px 18px 120px;
-    max-width:1150px;
-    margin:auto;
-}
+.app{padding:180px 18px 120px;max-width:1150px;margin:auto;}
 
 /* ===== CARD ===== */
-.card{
-    background:#fff;
-    border-radius:24px;
-    padding:30px;
-    margin-bottom:30px;
-    box-shadow:0 18px 45px rgba(18,78,138,.15);
-    animation:fadeUp .9s ease;
-}
+.card{background:#fff;border-radius:24px;padding:30px;margin-bottom:30px;box-shadow:0 18px 45px rgba(18,78,138,.15);animation:fadeUp .9s ease;}
 
 /* ===== HERO ===== */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.hero-text{
-    width:55%;
-}
-
-.hero h1{
-    font-size:36px;
-    color:var(--primary);
-}
-
-.hero p{
-    margin-top:8px;
-    font-size:16px;
-    color:#555;
-}
-
-.hero-img{
-    width:40%;
-    text-align:center;
-}
-
-.hero-img img{
-    width:290px;
-    height:290px;
-    object-fit:cover;
-    border-radius:50%;
-    border:4px solid var(--primary);
-}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:30px;}
+.hero-text{width:55%;}
+.hero h1{font-size:36px;color:var(--primary);}
+.hero p{margin-top:8px;font-size:16px;color:#555;}
+.hero-img{width:40%;text-align:center;}
+.hero-img img{width:290px;height:290px;object-fit:cover;border-radius:50%;border:4px solid var(--primary);cursor:pointer;}
 
 /* ===== SECTION TITLE ===== */
-.section-title{
-    font-size:22px;
-    font-weight:700;
-    color:var(--primary);
-    margin-bottom:20px;
-}
+.section-title{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:20px;}
 
 /* ===== GRID ===== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.box{
-    background:#fff;
-    border-radius:18px;
-    padding:22px;
-    text-align:center;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    transition:.35s ease;
-}
-
-.box:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(18,78,138,.25);
-}
-
-.box h3{
-    color:var(--primary);
-    margin-bottom:10px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.box{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.35s ease;cursor:pointer;}
+.box:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(18,78,138,.25);}
+.box h3{color:var(--primary);margin-bottom:10px;}
 
 /* ===== TEAM ===== */
-.team-name{
-    font-weight:600;
-    font-size:18px;
-}
+.team-name{font-weight:600;font-size:18px;display:flex;align-items:center;gap:15px;cursor:pointer;}
+.team-name img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--primary);}
 
 /* ===== BRAND LEGACY ===== */
-.brand-legacy{
-    text-align:center;
-    background:linear-gradient(135deg,var(--dark),var(--primary));
-    color:#fff;
-    position:relative;
-}
-
-.brand-legacy::before{
-    content:"6";
-    position:absolute;
-    top:-30px;
-    left:50%;
-    transform:translateX(-50%);
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:var(--gold);
-    color:var(--dark);
-    font-size:38px;
-    font-weight:800;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    animation:pulseGold 2.5s infinite;
-}
-
-.brand-legacy img{
-    width:100%;
-    max-width:420px;
-    margin:50px auto 20px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-}
-
-.brand-legacy h2{
-    margin-bottom:12px;
-}
-
-.brand-legacy p{
-    font-size:16px;
-    line-height:1.8;
-    opacity:.95;
-}
+.brand-legacy{text-align:center;background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;position:relative;}
+.brand-legacy::before{content:"6";position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:var(--gold);color:var(--dark);font-size:38px;font-weight:800;display:flex;align-items:center;justify-content:center;animation:pulseGold 2.5s infinite;}
+.brand-legacy img{width:100%;max-width:420px;margin:50px auto 20px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.35);}
+.brand-legacy h2{margin-bottom:12px;}
+.brand-legacy p{font-size:16px;line-height:1.8;opacity:.95;}
 
 /* ===== CTA ===== */
-.cta{
-    background:linear-gradient(135deg,var(--primary),var(--dark));
-    color:#fff;
-    text-align:center;
-}
-
-.cta a{
-    display:inline-block;
-    margin-top:18px;
-    padding:15px 34px;
-    background:var(--gold);
-    color:var(--dark);
-    border-radius:40px;
-    font-weight:700;
-    text-decoration:none;
-    transition:.35s ease;
-}
-
-.cta a:hover{
-    transform:scale(1.06);
-}
+.cta{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;text-align:center;}
+.cta a{display:inline-block;margin-top:18px;padding:15px 34px;background:var(--gold);color:var(--dark);border-radius:40px;font-weight:700;text-decoration:none;transition:.35s ease;}
+.cta a:hover{transform:scale(1.06);}
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-    .hero-text,.hero-img{
-        width:100%;
-    }
+@media(max-width:900px){.hero{flex-direction:column;text-align:center;}.hero-text,.hero-img{width:100%;}}
+
+/* ===== SERVICE IMAGE ===== */
+.service-images{display:none;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:20px;opacity:0;transition:opacity .6s ease, transform .6s ease;}
+.service-images img{width:100%;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.15);transition:transform .3s ease, filter .3s ease;filter: brightness(1.2);}
+.service-images img:hover{transform:scale(1.05);}
+.service-images.show{display:grid;opacity:1;transform:translateY(0);}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:2000;}
+.lightbox img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 15px 40px rgba(0,0,0,.5);}
+.lightbox.show{display:flex;}
+
+/* ===== CERTIFICATES ICON STYLE ===== */
+#certificates .grid img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid var(--primary);
+    cursor:pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+#certificates .grid img:hover{
+    transform:scale(1.12);
+    box-shadow:0 8px 25px rgba(18,78,138,.4);
 }
 </style>
-</head>
 
+<script>
+function toggleServiceImages(index){
+    const allImages = document.querySelectorAll('.service-images');
+    allImages.forEach((div,i)=>{
+        div.classList.remove('show');
+        div.style.transform='translateY(20px)';
+    });
+    if(allImages[index]){ allImages[index].classList.add('show'); }
+}
+
+function openLightbox(src){
+    const lightbox = document.getElementById('lightbox');
+    const img = lightbox.querySelector('img');
+    img.src = src;
+    lightbox.classList.add('show');
+}
+
+function closeLightbox(){
+    document.getElementById('lightbox').classList.remove('show');
+}
+</script>
+
+</head>
 <body>
 
 <header>
@@ -270,6 +133,8 @@ nav a:hover{
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#team">Team</a>
+    <a href="#courses">Courses</a>
+    <a href="#certificates">Certificates</a>
     <a href="#legacy">6 Years</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -283,65 +148,123 @@ nav a:hover{
         <p>Building stronger returns, higher performance & injury-free bodies.</p>
     </div>
     <div class="hero-img">
-        <img src="WhatsApp Image 2026-01-18 at 9.21.48 AM.jpeg" alt="Mohamed Qenawy">
+        <img src="WhatsApp Image 2026-01-18 at 9.21.48 AM.jpeg" alt="Mohamed Qenawy" onclick="openLightbox(this.src)">
     </div>
 </div>
 
+<!-- Services -->
 <div class="card" id="services">
     <div class="section-title">Our Services</div>
     <div class="grid">
-        <div class="box">
-            <h3>Rehabilitation</h3>
-            <p>Advanced recovery programs</p>
-        </div>
-        <div class="box">
-            <h3>Injury Prevention</h3>
-            <p>Reduce injury risk</p>
-        </div>
-        <div class="box">
-            <h3>Performance Training</h3>
-            <p>Elite athletic development</p>
-        </div>
+        <div class="box" onclick="toggleServiceImages(0)"><h3>Rehabilitation</h3><p>Advanced recovery programs</p></div>
+        <div class="box" onclick="toggleServiceImages(1)"><h3>Injury Prevention</h3><p>Reduce injury risk</p></div>
+        <div class="box" onclick="toggleServiceImages(2)"><h3>Performance Training</h3><p>Elite athletic development</p></div>
+    </div>
+
+    <div class="service-images">
+        <img src="" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="service-images">
+        <img src="" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="service-images">
+        <img src="" alt="Performance Training Image" onclick="openLightbox(this.src)">
     </div>
 </div>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Expanded Image">
+</div>
+
+<!-- Staff -->
 <div class="card" id="team">
-    <div class=" section-title ">The Leader of team</div>
+    <div class="section-title">Our Staff</div>
     <div class="grid">
-        <div class="box team-name">C. Mohamed Qenawy</div>
+        <div class="box team-name" onclick="openLightbox(this.querySelector('img').src)">
+            <img src="WhatsApp Image 2026-01-19 at 2.59.53 PM.jpeg" alt="Staff Image"><br><br>
+            <span>T.Jana</span><br><br>
+            <span>T.Rana</span>
+        </div>
     </div>
 </div>
 
-<!-- BRAND LEGACY -->
+<!-- Experience -->
+<div class="card">
+    <div class="section-title">Experience</div>
+    <ul>
+        <li>Worked at Sky Force Gym.</li>
+        <li>Worked at Port Fouad Club as an Injury, Rehabilitation and Physical Preparation specialist for the Youth sector.</li>
+        <li>Worked at Grand Revenge Gym.</li>
+        <li>Worked at Port Fouad Club as an Injury, Rehabilitation and Physical Preparation specialist for 2023-2024.</li>
+        <li>Participated as Injury & Rehabilitation Specialist in the Port Said National Team, Born in 2005, Affiliated With the Egyptian Football Association.</li>
+        <li>Worked at Marvel Gym.</li>
+        <li>Worked at AL-Merreikh Club as an Injury, Rehabilitation and Physical Preparation specialist for the Youth sector.</li>
+        <li>Worked at Base-1 Gym.</li>
+        <li>Worked at AL-Merreikh Club as an Injury, Rehabilitation and Physical Preparation specialist for 2021-2022.</li>
+    </ul>
+</div>
+
+<!-- Courses -->
+<div class="card" id="courses">
+    <div class="section-title">Courses</div>
+    <ul>
+        <li>Workshop of Power & Bands With A Practical Application</li>
+        <li>Kinesio Taping in Sport From EASPR</li>
+        <li>Breathing Exercises in Sports From EASPR</li>
+        <li>Course of Strength & Conditioning</li>
+        <li>Rehabilitation by International Olympic Institute of Sport Sciences</li>
+        <li>Sports Injury and First Aid by International Olympic Institute of Sport Science</li>
+        <li>Complete the Physioplus Course Rehabilitation in Sport</li>
+        <li>How to Control Movement Dysfunction From CDC</li>
+        <li>The 1st International Annual Meeting of APR Academy</li>
+    </ul>
+</div>
+
+<!-- Certificates -->
+<div class="card" id="certificates">
+    <div class="section-title"> Qenawy's Certificates </div>
+    <div class="grid">
+        <!-- 19 certificates as icons -->
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (1).jpeg" alt="Certificate 1" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (2).jpeg" alt="Certificate 2" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (3).jpeg" alt="Certificate 3" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (4).jpeg" alt="Certificate 4" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (5).jpeg" alt="Certificate 5" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (6).jpeg" alt="Certificate 6" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (7).jpeg" alt="Certificate 7" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM.jpeg" alt="Certificate 8" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (1).jpeg" alt="Certificate 9" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (2).jpeg" alt="Certificate 10" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (3).jpeg" alt="Certificate 11" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (4).jpeg" alt="Certificate 12" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (5).jpeg" alt="Certificate 13" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM (6).jpeg" alt="Certificate 14" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.23 PM.jpeg" alt="Certificate 15" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.24 PM (1).jpeg" alt="Certificate 16" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.24 PM (2).jpeg" alt="Certificate 17" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.24 PM (3).jpeg" alt="Certificate 18" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 1.25.24 PM.jpeg" alt="Certificate 19" onclick="openLightbox(this.src)">
+    </div>
+</div>
+
+<!-- Brand Legacy -->
 <div class="card brand-legacy" id="legacy">
     <img src="WhatsApp Image 2026-01-18 at 11.19.22 AM.jpeg" alt="6 Years Legacy">
     <h2>Six Years of Trust & Excellence</h2>
-    <p>
-        Six years of continuous work, real rehabilitation stories,
-        elite athletes, and a brand built on trust, results, and science.
-    </p>
+    <p>Six years of continuous work, real rehabilitation stories, elite athletes, and a brand built on trust, results, and science.</p>
 </div>
- <div class=" section-title "> Our Staff </div>
-            <div class="grid">
-                <div class="box team-name"> T.Jana </div>
-                <div class="box team-name"> T.Rana </div>
-                </div>
+
+<!-- Contact -->
 <div class="card cta" id="contact">
     <h2>Start Your Recovery Journey</h2>
     <p>Professional assessment & elite care</p>
     <a href="https://wa.me/201019815737" target="_blank">WhatsApp Now</a>
-    <a href="https://www.facebook.com/share/1BjHwwj3vU/" target="_blank">facebook Now</a>
-    <a href="https://www.instagram.com/_qenawy?igsh=MWU1eWxiOG5tbTNmeQ==" target="_blank">instagram Now </a>
-    <a href="https://www.instagram.com/the_qeno.rehapzon?igsh=MWU5Z3FuMm0wZ2JuMQ==" target="_blank">instagram Now (Another Account) </a>
+    <a href="https://www.facebook.com/share/1BjHwwj3vU/" target="_blank">Facebook Now</a>
+    <a href="https://www.instagram.com/_qenawy?igsh=MWU1eWxiOG5tbTNmeQ==" target="_blank">Instagram Now</a>
+    <a href="https://www.instagram.com/the_qeno.rehapzon?igsh=MWU5Z3FuMm0wZ2JuMQ==" target="_blank">Instagram Now (Another Account)</a>
 </div>
+
 </div>
 
 </body>
-
-
 </html>
-
-
-
-
-
