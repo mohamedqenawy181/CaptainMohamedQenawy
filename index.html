@@ -8,7 +8,7 @@
 <style>
 :root{
     --primary:#124E8A;
-    --gold:#E7C7A6;
+    --gold:#FFD37E;
     --dark:#0B1F33;
     --light:#F6F7F9;
 }
@@ -18,56 +18,65 @@ body{font-family:'Segoe UI', Arial, sans-serif;background:var(--light);color:var
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp{from{opacity:0; transform:translateY(30px);}to{opacity:1; transform:translateY(0);}}
-@keyframes pulseGold{0%{box-shadow:0 0 0 rgba(231,199,166,.6);}50%{box-shadow:0 0 25px rgba(231,199,166,.9);}100%{box-shadow:0 0 0 rgba(231,199,166,.6);}}
+@keyframes pulseGold{0%{box-shadow:0 0 0 rgba(255,211,126,.6);}50%{box-shadow:0 0 25px rgba(255,211,126,.9);}100%{box-shadow:0 0 0 rgba(255,211,126,.6);}}
 
 /* ===== HEADER ===== */
 header{position:fixed;top:0;width:100%;background:var(--primary);display:flex;align-items:center;gap:15px;padding:18px 22px;z-index:1000;animation:fadeUp .8s ease;}
 header img{height:58px;}
-header span{color:var(--gold);font-weight:600;letter-spacing:1px;}
+header span{color: var(--gold); font-weight:800; letter-spacing:2px; font-size:18px;}
 
 /* ===== NAV ===== */
 nav{position:fixed;top:85px;width:100%;background:#0b1f33;display:flex;justify-content:center;gap:25px;padding:12px 0;z-index:999;}
-nav a{color:var(--gold);text-decoration:none;font-weight:600;transition:.3s;}
-nav a:hover{opacity:.7;}
+nav a{color:var(--gold);text-decoration:none;font-weight:700;transition:.3s;}
+nav a:hover{opacity:.8; transform:scale(1.05);}
 
 /* ===== APP ===== */
 .app{padding:180px 18px 120px;max-width:1150px;margin:auto;}
 
 /* ===== CARD ===== */
-.card{background:#fff;border-radius:24px;padding:30px;margin-bottom:30px;box-shadow:0 18px 45px rgba(18,78,138,.15);animation:fadeUp .9s ease;}
+.card{background:#fff;border-radius:24px;padding:30px;margin-bottom:30px;box-shadow:0 18px 45px rgba(18,78,138,.15);animation:fadeUp .9s ease;transition: all .5s ease;}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(18,78,138,.25);}
 
 /* ===== HERO ===== */
 .hero{display:flex;align-items:center;justify-content:space-between;gap:30px;}
 .hero-text{width:55%;}
-.hero h1{font-size:36px;color:var(--primary);}
+.hero h1{font-size:42px;color:var(--primary);font-weight:900;letter-spacing:1.2px;}
 .hero p{margin-top:8px;font-size:16px;color:#555;}
 .hero-img{width:40%;text-align:center;}
-.hero-img img{width:290px;height:290px;object-fit:cover;border-radius:50%;border:4px solid var(--primary);cursor:pointer;}
+.hero-img img{width:290px;height:290px;object-fit:cover;border-radius:50%;border:5px solid var(--primary);cursor:pointer;transition:.4s ease;box-shadow:0 12px 35px rgba(18,78,138,0.4);}
+.hero-img img:hover{transform:scale(1.08) rotate(2deg);box-shadow:0 20px 55px rgba(18,78,138,0.6);}
 
 /* ===== SECTION TITLE ===== */
-.section-title{font-size:22px;font-weight:700;color:var(--primary);margin-bottom:20px;}
+.section-title{font-size:24px;font-weight:800;color:var(--primary);margin-bottom:20px;letter-spacing:1px;}
 
 /* ===== GRID ===== */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-.box{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.35s ease;cursor:pointer;}
-.box:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(18,78,138,.25);}
-.box h3{color:var(--primary);margin-bottom:10px;}
+.box{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.08);transition:.35s ease;cursor:pointer;position:relative;overflow:hidden;}
+.box:hover{
+  transform:scale(1.08) translateY(-8px);
+  box-shadow:0 22px 50px rgba(18,78,138,.35);
+  background: linear-gradient(135deg, #124E8A, #FFD37E);
+  color:#fff;
+}
+.box h3{color:var(--primary);margin-bottom:10px;transition:.35s ease;}
+.box:hover h3{color:#fff;}
 
 /* ===== TEAM ===== */
-.team-name{font-weight:600;font-size:18px;display:flex;align-items:center;gap:15px;cursor:pointer;}
-.team-name img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--primary);}
+.team-name{font-weight:600;font-size:18px;display:flex;align-items:center;gap:15px;cursor:pointer;transition:.3s;}
+.team-name img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--primary);transition:.4s ease;}
+.team-name img:hover{transform:scale(1.1) rotate(2deg);box-shadow:0 15px 45px rgba(18,78,138,0.5);}
 
 /* ===== BRAND LEGACY ===== */
-.brand-legacy{text-align:center;background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;position:relative;}
+.brand-legacy{text-align:center;background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;position:relative;overflow:hidden;}
 .brand-legacy::before{content:"6";position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:var(--gold);color:var(--dark);font-size:38px;font-weight:800;display:flex;align-items:center;justify-content:center;animation:pulseGold 2.5s infinite;}
-.brand-legacy img{width:100%;max-width:420px;margin:50px auto 20px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.35);}
-.brand-legacy h2{margin-bottom:12px;}
+.brand-legacy img{width:100%;max-width:420px;margin:50px auto 20px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.45);}
+.brand-legacy h2{margin-bottom:12px;font-weight:900;}
 .brand-legacy p{font-size:16px;line-height:1.8;opacity:.95;}
 
 /* ===== CTA ===== */
 .cta{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;text-align:center;}
-.cta a{display:inline-block;margin-top:18px;padding:15px 34px;background:var(--gold);color:var(--dark);border-radius:40px;font-weight:700;text-decoration:none;transition:.35s ease;}
-.cta a:hover{transform:scale(1.06);}
+.cta a{display:inline-block;margin:12px 12px 0 0;padding:15px 34px;background:var(--gold);color:var(--dark);border-radius:40px;font-weight:700;text-decoration:none;transition:.35s ease;box-shadow:0 6px 18px rgba(18,78,138,.3);}
+.cta a:hover{transform:scale(1.12);box-shadow:0 12px 30px rgba(18,78,138,.6);}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:900px){.hero{flex-direction:column;text-align:center;}.hero-text,.hero-img{width:100%;}}
@@ -75,12 +84,12 @@ nav a:hover{opacity:.7;}
 /* ===== SERVICE IMAGE ===== */
 .service-images{display:none;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:20px;opacity:0;transition:opacity .6s ease, transform .6s ease;}
 .service-images img{width:100%;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.15);transition:transform .3s ease, filter .3s ease;filter: brightness(1.2);}
-.service-images img:hover{transform:scale(1.05);}
+.service-images img:hover{transform:scale(1.08);}
 .service-images.show{display:grid;opacity:1;transform:translateY(0);}
 
 /* ===== LIGHTBOX ===== */
-.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:2000;}
-.lightbox img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 15px 40px rgba(0,0,0,.5);}
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:2000;backdrop-filter:blur(3px);}
+.lightbox img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.7);}
 .lightbox.show{display:flex;}
 
 /* ===== CERTIFICATES ICON STYLE ===== */
@@ -89,18 +98,19 @@ nav a:hover{opacity:.7;}
     gap:15px;
 }
 #certificates .grid img{
-    width:100px;
+    width:100%;
     height:100px;
     object-fit:cover;
     border-radius:12px;
     border:2px solid var(--primary);
     cursor:pointer;
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition: transform .4s ease, box-shadow .4s ease;
 }
 #certificates .grid img:hover{
-    transform:scale(1.12);
-    box-shadow:0 8px 25px rgba(18,78,138,.4);
+    transform:scale(1.18) rotate(1deg);
+    box-shadow:0 12px 30px rgba(255,215,126,0.6);
 }
+
 </style>
 
 <script>
@@ -180,7 +190,7 @@ function closeLightbox(){
     <img src="" alt="Expanded Image">
 </div>
 
-<!-- Staff -->
+<!-- Team -->
 <div class="card" id="team">
     <div class="section-title">Our Staff</div>
     <div class="grid">
@@ -231,7 +241,6 @@ function closeLightbox(){
 <div class="card" id="certificates">
     <div class="section-title"> Qenawy's Certificates </div>
     <div class="grid">
-        <!-- 23 certificates as icons -->
         <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (5).jpeg" alt="Certificate 5" onclick="openLightbox(this.src)">
         <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (6).jpeg" alt="Certificate 6" onclick="openLightbox(this.src)">
         <img src="WhatsApp Image 2026-01-19 at 1.25.22 PM (7).jpeg" alt="Certificate 7" onclick="openLightbox(this.src)">
@@ -272,6 +281,5 @@ function closeLightbox(){
 </div>
 
 </div>
-
 </body>
 </html>
