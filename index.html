@@ -113,7 +113,7 @@ nav a:hover{opacity:.8; transform:scale(1.05);}
     box-shadow:0 12px 30px rgba(255,215,126,0.6);
 }
 
-/* ===== HERO IMAGES GRID FIX (NEW ADDITION) ===== */
+/* ===== HERO IMAGES GRID FIX ===== */
 .hero-img{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
@@ -128,6 +128,26 @@ nav a:hover{opacity:.8; transform:scale(1.05);}
     max-width:180px;
     height:180px;
     object-fit:cover;
+}
+
+/* ===== PHOTOS SECTION ===== */
+#photos .grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+#photos .grid img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    border:3px solid var(--primary);
+    cursor:pointer;
+    transition:transform .4s ease, box-shadow .4s ease;
+}
+#photos .grid img:hover{
+    transform:scale(1.1);
+    box-shadow:0 15px 35px rgba(18,78,138,0.5);
 }
 </style>
 
@@ -167,6 +187,7 @@ function closeLightbox(){
     <a href="#team">Team</a>
     <a href="#courses">Courses</a>
     <a href="#certificates">Certificates</a>
+    <a href="#photos">Photos</a>
     <a href="#legacy">6 Years</a>
     <a href="#contact">Contact Us</a>
 </nav>
@@ -182,14 +203,10 @@ function closeLightbox(){
     </div>
     <div class="hero-img">
         <img src="WhatsApp Image 2026-01-18 at 9.21.48 AM.jpeg" alt="Mohamed Qenawy" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
-        <img src="WhatsApp Image 2026-01-20 at 3.20.20 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+       
     </div>
 </div>
+
 <!-- Services -->
 <div class="card" id="services">
     <div class="section-title">Our Services</div>
@@ -199,7 +216,6 @@ function closeLightbox(){
         <div class="box" onclick="toggleServiceImages(2)"><h3>Performance Training</h3><p>Elite athletic development</p></div>
     </div>
     <div class="service-images">
-        <img src="WhatsApp Image 2026-01-19 at 10.21.21 PM (1).jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
         <img src="WhatsApp Image 2026-01-19 at 10.21.20 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
         <img src="WhatsApp Image 2026-01-20 at 3.10.47 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
         <img src="WhatsApp Image 2026-01-20 at 3.11.02 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
@@ -207,8 +223,14 @@ function closeLightbox(){
         <img src="WhatsApp Image 2026-01-20 at 3.10.46 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
     </div>
     <div class="service-images">
+        <img src="WhatsApp Image 2026-01-20 at 10.15.39 PM.jpeg" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 10.15.40 PM (1).jpeg" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 10.15.40 PM.jpeg" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 10.15.41 PM.jpeg" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
     </div>
     <div class="service-images">
+        <img src="WhatsApp Image 2026-01-19 at 10.21.21 PM (1).jpeg" alt="Performance  Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM.jpeg" alt="Performance  Image" onclick="openLightbox(this.src)">
     </div>
 </div>
 
@@ -218,7 +240,7 @@ function closeLightbox(){
     <button onclick="closeLightbox()">× Close</button>
 </div>
 
-<!-- Team (Ladies Only, Single Image) -->
+<!-- Team -->
 <div class="card" id="team">
     <div class="section-title">Ladies Rehabilitation Team</div>
     <p style="margin-bottom:20px;color:#555;font-weight:600;">
@@ -230,7 +252,6 @@ function closeLightbox(){
         <div class="box team-name">
             <img src="WhatsApp Image 2026-01-19 at 10.20.04 PM.jpeg" alt="Ladies Session Image" onclick="openLightbox(this.src)">
             <img src="WhatsApp Image 2026-01-19 at 2.59.53 PM.jpeg" alt="Ladies Session Image" onclick="openLightbox(this.src)">
-
             <div>
                 <span style="font-weight:800;font-size:18px;">Ladies Session</span><br>
                 <small>images</small>
@@ -295,6 +316,19 @@ function closeLightbox(){
     </div>
 </div>
 
+<!-- Photos Section (NEW) -->
+<div class="card" id="photos">
+    <div class="section-title">Photos</div>
+    <div class="grid">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.20 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+    </div>
+</div>
+
 <!-- Brand Legacy -->
 <div class="card brand-legacy" id="legacy">
     <img src="WhatsApp Image 2026-01-18 at 11.19.22 AM.jpeg" alt="6 Years Legacy">
@@ -306,8 +340,8 @@ function closeLightbox(){
 <div class="card cta" id="contact">
     <h2>Start Your Recovery Journey</h2>
     <p>Professional assessment & elite care</p>
-    <a href="https://wa.me/201019815737" target="_blank">WhatsApp Now</a>
-    <a href="https://www.facebook.com/share/1BjHwwj3vU/" target="_blank">Facebook Now</a>
+    <a href="https://wa.me/201019815737" target="_blank">WhatsApp </a>
+    <a href="https://www.facebook.com/share/1BjHwwj3vU/" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/_qenawy?igsh=MWU1eWxiOG5tbTNmeQ==" target="_blank">Instagram ( Personal )</a>
     <a href="https://www.instagram.com/the_qeno.rehapzon?igsh=MWU5Z3FuMm0wZ2JuMQ==" target="_blank">Instagram Page</a>
 </div>
@@ -315,4 +349,3 @@ function closeLightbox(){
 </div>
 </body>
 </html>
-
