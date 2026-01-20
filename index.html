@@ -112,6 +112,23 @@ nav a:hover{opacity:.8; transform:scale(1.05);}
     transform:scale(1.18) rotate(1deg);
     box-shadow:0 12px 30px rgba(255,215,126,0.6);
 }
+
+/* ===== HERO IMAGES GRID FIX (NEW ADDITION) ===== */
+.hero-img{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
+    justify-items:center;
+}
+.hero-img br{
+    display:none;
+}
+.hero-img img{
+    width:100%;
+    max-width:180px;
+    height:180px;
+    object-fit:cover;
+}
 </style>
 
 <script>
@@ -151,7 +168,7 @@ function closeLightbox(){
     <a href="#courses">Courses</a>
     <a href="#certificates">Certificates</a>
     <a href="#legacy">6 Years</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact">Contact Us</a>
 </nav>
 
 <div class="app">
@@ -165,9 +182,14 @@ function closeLightbox(){
     </div>
     <div class="hero-img">
         <img src="WhatsApp Image 2026-01-18 at 9.21.48 AM.jpeg" alt="Mohamed Qenawy" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.18 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (1).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM (2).jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.19 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.20.20 PM.jpeg" alt="Qenawy Logo" onclick="openLightbox(this.src)">
     </div>
 </div>
-
 <!-- Services -->
 <div class="card" id="services">
     <div class="section-title">Our Services</div>
@@ -178,12 +200,15 @@ function closeLightbox(){
     </div>
     <div class="service-images">
         <img src="WhatsApp Image 2026-01-19 at 10.21.21 PM (1).jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-19 at 10.21.20 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.10.47 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.11.02 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.10.54 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
+        <img src="WhatsApp Image 2026-01-20 at 3.10.46 PM.jpeg" alt="Rehabilitation Image" onclick="openLightbox(this.src)">
     </div>
     <div class="service-images">
-        <img src="WhatsApp Image 2026-01-19 at 10.21.21 PM.jpeg" alt="Injury Prevention Image" onclick="openLightbox(this.src)">
     </div>
     <div class="service-images">
-        <img src="WhatsApp Image 2026-01-19 at 10.21.20 PM.jpeg" alt="Performance Training Image" onclick="openLightbox(this.src)">
     </div>
 </div>
 
@@ -198,15 +223,17 @@ function closeLightbox(){
     <div class="section-title">Ladies Rehabilitation Team</div>
     <p style="margin-bottom:20px;color:#555;font-weight:600;">
         Female-only rehabilitation & training sessions <br>
-        تحت إشراف <strong> T.Rana </strong> & <strong> T.Jana </strong>
+        <strong> Lead By C.Qenawy , Under The Supervision of T.Jana & T.Rana </strong>
     </p>
 
     <div class="grid">
-        <div class="box team-name" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="WhatsApp Image 2026-01-19 at 10.20.04 PM.jpeg" alt="Ladies Session Image">
+        <div class="box team-name">
+            <img src="WhatsApp Image 2026-01-19 at 10.20.04 PM.jpeg" alt="Ladies Session Image" onclick="openLightbox(this.src)">
+            <img src="WhatsApp Image 2026-01-19 at 2.59.53 PM.jpeg" alt="Ladies Session Image" onclick="openLightbox(this.src)">
+
             <div>
                 <span style="font-weight:800;font-size:18px;">Ladies Session</span><br>
-                <small>image</small>
+                <small>images</small>
             </div>
         </div>
     </div>
@@ -288,3 +315,4 @@ function closeLightbox(){
 </div>
 </body>
 </html>
+
